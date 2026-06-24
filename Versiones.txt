@@ -1,0 +1,14 @@
+v0.01
+- Carga de JSON
+- Primeras búsquedas
+- GUI Funcional
+
+v0.02
+- Organización de funciones
+- Estadísticas
+- Operaciones
+- Primera GUI funcional
+- Grid
+- Integración lógica/interfaz
+
+v0.03

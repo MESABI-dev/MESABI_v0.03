@@ -1,0 +1,25 @@
+Nivel intermedio (20% → 50%)
+ Manejo de excepciones (try, except)
+ Comprensión de listas
+ Módulos y paquetes
+ Programación orientada a objetos (clases de verdad, no solo conocer que existen)
+ Archivos CSV
+ Uso de librerías externas
+ Depuración (debugging)
+Nivel avanzado (50% → 80%)
+ Decoradores
+ Generadores (yield)
+ Context managers
+ Testing
+ Tipado (typing)
+ Patrones de diseño
+ Concurrencia básica
+ Bases de datos SQL
+Nivel experto (80% → 100%)
+ Arquitectura de software
+ Optimización de rendimiento
+ Asincronía (asyncio)
+ Desarrollo de librerías
+ Distribución de aplicaciones
+ Internals de Python
+ Escalabilidad y mantenimiento de proyectos grandes
