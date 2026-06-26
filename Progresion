@@ -23,3 +23,13 @@ Nivel experto (80% → 100%)
  Distribución de aplicaciones
  Internals de Python
  Escalabilidad y mantenimiento de proyectos grandes
+
+ Encapsulación.
+Herencia.
+Polimorfismo.
+Composición.
+Clases abstractas.
+Métodos estáticos.
+Métodos de clase.
+Propiedades (@property).
+Sobrecarga de operadores (__eq__, __lt__, etc.).
