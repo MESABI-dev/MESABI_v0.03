@@ -14,6 +14,7 @@ class Elemento:
             f"Masa atómica: {self.masa}\n"
             f"Densidad: {self.densidad}g/cm³\n"
         )
+    
     def comparar(self, otro_elemento):
         if not isinstance(otro_elemento, Elemento):
          return "Error"
@@ -36,17 +37,54 @@ class Elemento:
            f"=================================================="
         )   
         return reporte
-    
+class Aleacion:    
+    def __init__(self, nombre):
+       self.nombre = nombre
+       self.componentes = []
+    def agregar_elemento(self, elemento_objeto, porcentaje):
+       if not isinstance(elemento_objeto, Elemento):
+          print("Error")
+          return False
+       self.componentes.append({
+          "elemento": elemento_objeto,
+          "porcentaje": float(porcentaje),
+       })
+       return True  
+    def validar_composicion(self):
+       total = sum(comp["porcentaje"] for comp in self.componentes)
+       return total == 100
+    def obtener_reporte(self):
+       reporte = f"=== Ficha de aleación: {self.nombre} ===\n"
+       reporte += "Composicion química: \n"
+       for c in self.componentes:
+          objetos_elemento = c["elemento"]
+          porcentaje = c["porcentaje"]       
+          reporte += f"[{objetos_elemento.simbolo}] {objetos_elemento.nombre}: {porcentaje}%\n"  
+       reporte += f"Suma total verificada: {sum(comp['porcentaje'] for comp in self.componentes)}%\n"
+       return reporte
+    def obtener_elemento(self, elemento_deseado):
+       for e in self.componentes:
+          elemento = e["elemento"]
+          if elemento == elemento_deseado or elemento.simbolo == elemento_deseado:
+             return elemento
+       
 hierro = Elemento("Hierro", "Fe", 26, 55.845, 7.874)
 oro = Elemento("Oro", "Au", 79, 196.967, 19.300)
-titanio = Elemento("Titanio", "Ti", 22, 47.867, 4.506)    
-print(titanio.obtener_texto())
-print("\n")
+titanio = Elemento("Titanio", "Ti", 22, 47.867, 4.506)  
+carbono = Elemento("Carbono", "C", 6 , 12.011, 2.267)
+cobre = Elemento("Cobre","Cu", 29 , 63.546, 8.960)
+estano = Elemento("Estaño","Sn", 50 , 118.710, 7.310)
 
-resultado_1 = hierro.compar8ar(oro)
-print(resultado_1)
-print("\n")
+acero = Aleacion("Acero Carbono Estándar")
+acero.agregar_elemento(hierro, 98.5)
+acero.agregar_elemento(carbono, 1.5)
 
-resultado_2 = titanio.comparar(oro)
-print(resultado_2) 
+bronce = Aleacion("Bronce de Fundición")
+bronce.agregar_elemento(cobre, 88.0)
+bronce.agregar_elemento(estano, 12.0)
+
+#acero.obtener_elemento("iron")
+
+print(acero.obtener_reporte())
 print("\n")
+print(bronce.obtener_reporte()) 
