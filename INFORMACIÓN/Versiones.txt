@@ -12,3 +12,4 @@ v0.02
 - Integración lógica/interfaz
 
 v0.03
+-Implementacion de clases y primeros pasos en POO 
