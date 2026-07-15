@@ -1,6 +1,6 @@
 import json
-from logic.MESABI_POO.POO_BASE import Elemento
-from repositorios.excepciones import (ElementoNoEncontradoError, ArchivoNoEncontradoError)
+from Excepciones.excepciones import (ElementoNoEncontradoError, ArchivoNoEncontradoError)
+from modelos.Elemento import Elemento
 class CargadorJson:
     def __init__(self, ruta_json):
         self.ruta_json = ruta_json

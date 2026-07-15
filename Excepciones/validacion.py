@@ -1,0 +1,2 @@
+from excepciones import MesabiError
+

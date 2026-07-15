@@ -2,9 +2,7 @@ import os
 import json
 
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))
-
 LOGIC_DIR = os.path.dirname(BASE_DIR)
-
 file_path = os.path.join(
     LOGIC_DIR,
     "Periodic_table.json"

@@ -28,3 +28,4 @@ class Importador(ABC):
     @abstractmethod
     def cerrar(self) -> None:
         pass
+    

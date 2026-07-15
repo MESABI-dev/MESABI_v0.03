@@ -33,3 +33,38 @@ Métodos estáticos.
 Métodos de clase.
 Propiedades (@property).
 Sobrecarga de operadores (__eq__, __lt__, etc.).
+
+Módulo 1 — Python intermedio
+Tipado (typing)
+dataclass
+Enumeraciones (Enum)
+Comprensiones
+Iteradores
+Generadores (yield)
+Funciones de orden superior
+Módulo 2 — POO avanzada
+Composición vs herencia
+Clases abstractas
+Protocolos
+Mixins
+Interfaces en Python
+Módulo 3 — Arquitectura
+Repository
+Factory
+Strategy
+Observer
+Dependency Injection
+Módulo 4 — Calidad
+Manejo de excepciones
+Logging
+Pruebas unitarias
+Refactorización
+Organización de proyectos
+Módulo 5 — Python profesional
+Decoradores
+Context Managers
+pathlib
+collections
+itertools
+functools
+typing avanzado
