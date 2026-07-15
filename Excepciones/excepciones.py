@@ -22,3 +22,8 @@ class ArchivoNoEncontradoError(ArchivosError):
     def __init__(self, ruta: str):
         self.ruta = ruta
         super().__init__(f"Archivo {ruta} no encontrado")
+
+class ArchivoJsonInvalido(ArchivosError):
+    def __init__(self, ruta: str):
+        self.ruta = ruta
+        super().__init__(f"El Archivo {ruta} no es válido")        
