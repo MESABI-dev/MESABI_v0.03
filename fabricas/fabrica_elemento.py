@@ -1,45 +1,55 @@
-from repositorios.cargadores import datos
-
+from typing import Any
+from dataclasses import dataclass
 class ElementoFabrica:
     @classmethod
-    def crear_desde_diccionario(cls, datos: list) -> dict:
-        return cls(
-            numero_atomico = datos["number"],
+    def crear_desde_diccionario(cls, diccionario: dict[str, Any]) -> Elemento:
+        return Elemento(
+            numero_atomico = diccionario["number"],
 
-            simbolo = datos["symbol"],
-            nombre = datos["name"],
+            simbolo = diccionario["symbol"],
+            nombre = diccionario["name"],
 
-            masa_atomica = datos["atomic_mass"],
+            masa_atomica = diccionario["atomic_mass"],
 
-            apariencia = datos["appearance"],
+            apariencia = diccionario["appearance"],
 
-            categoria = datos["category"],
-            fase = datos["phase"],
+            categoria = diccionario["category"],
+            fase = diccionario["phase"],
 
-            periodo = datos["period"],
-            grupo = datos["group"],
-            bloque = datos["block"],
+            periodo = diccionario["period"],
+            grupo = diccionario["group"],
+            bloque = diccionario["block"],
 
-            columna_tabla = datos["ypos"],
-            fila_tabla = datos["xpos"],
+            columna_tabla = diccionario["ypos"],
+            fila_tabla = diccionario["xpos"],
 
-            densidad = datos["density"],
-            punto_fusion = datos["melt"],
-            punto_ebullicion = datos["boil"],
-            calor_molar = datos["molar_heat"],
+            densidad = diccionario["density"],
+            punto_fusion = diccionario["melt"],
+            punto_ebullicion = diccionario["boil"],
+            calor_molar = diccionario["molar_heat"],
 
-            configuracion_electronica = datos["electron_configuration"],
-            configuracion_electronica_semantica = datos["electron_configuration_semantic"],
+            configuracion_electronica = diccionario["electron_configuration"],
+            configuracion_electronica_semantica = diccionario["electron_configuration_semantic"],
 
-            capas_electronicas = datos["shells"],
+            capas_electronicas = diccionario["shells"],
 
-            afinidad_electronica = datos["electron_affinity"],
-            electronegatividad = datos["electronegativity_pauling"],
+            afinidad_electronica = diccionario["electron_affinity"],
+            electronegatividad = diccionario["electronegativity_pauling"],
 
-            energias_ionizacion = datos["ionization_energies"],
+            energias_ionizacion = diccionario["ionization_energies"],
 
-            descubierto_por = datos["discovered_by"],
-            nombrado_por = datos["named_by"],
-            descripcion = datos["summary"],
+            descubierto_por = diccionario["discovered_by"],
+            nombrado_por = diccionario["named_by"],
+            descripcion = diccionario["summary"],
 
         ) 
+
+    @classmethod
+    def crear_varios(cls, lista_de_diccionarios: list[dict[str, Any]]) -> list[Elemento]:
+        lista_elementos = []
+        for diccionario in lista_de_diccionarios:
+            elemento = cls.crear_desde_diccionario(diccionario)
+            lista_elementos.append(elemento)
+        return lista_elementos    
+
+  

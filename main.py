@@ -9,5 +9,6 @@ datos = cargador.cargar()
 print(type(datos))
 print(type(datos[0]))
 
-elemento = ElementoFabrica.crear_desde_diccionario(datos[0])
-print(type(elemento))
+for dato in datos:
+    dato = ElementoFabrica.crear_desde_diccionario(datos)
+    print(type(dato))
