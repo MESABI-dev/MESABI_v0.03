@@ -1,5 +1,5 @@
 #from Elemento import Elemento
-from Excepciones.excepciones import ValorInvalidoError
+from excepciones.excepciones import ValorInvalidoError
 class Elemento: # Clase Elemento para Probar wey
    def __init__(self, nombre):
       self.nombre = nombre

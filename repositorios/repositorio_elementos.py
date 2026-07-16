@@ -1,6 +1,6 @@
 import json
-from Excepciones.excepciones import (ElementoNoEncontradoError, ArchivoNoEncontradoError)
-from modelos.Elemento import Elemento
+from excepciones.excepciones import (ElementoNoEncontradoError, ArchivoNoEncontradoError)
+from modelos.elemento import Elemento
 class RepositorioElementos:
     def __init__(self, elementos: list[Elemento]):
         self._elementos = elementos 

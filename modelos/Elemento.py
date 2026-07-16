@@ -1,6 +1,6 @@
 from __future__ import annotations
 from dataclasses import dataclass
-from modelos.Validadores import ValidadorElemento
+from modelos.validadores import ValidadorElemento
 @dataclass(slots=True)
 class Elemento:
     numero_atomico: int
@@ -44,3 +44,6 @@ class Elemento:
     
 def __post_init__(self):
     ValidadorElemento.validar(self)
+
+
+  

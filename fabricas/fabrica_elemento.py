@@ -1,10 +1,8 @@
-from repositorios.Cargadores import CargadorJson
-datos = CargadorJson.cargar_Json()
-from modelos.Elemento import Elemento
+from repositorios.cargadores import datos
 
 class ElementoFabrica:
     @classmethod
-    def crear_desde_diccionario(cls, datos: list) -> Elemento:
+    def crear_desde_diccionario(cls, datos: list) -> dict:
         return cls(
             numero_atomico = datos["number"],
 
@@ -44,4 +42,4 @@ class ElementoFabrica:
             nombrado_por = datos["named_by"],
             descripcion = datos["summary"],
 
-        )
+        ) 
